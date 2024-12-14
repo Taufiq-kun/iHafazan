@@ -30,6 +30,7 @@ public class Main {
 
             // Close the scanner
             scan.close(); // Temporary fix
+            System.out.println("Scanner closed");
             
         }
 
