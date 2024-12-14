@@ -33,9 +33,13 @@ public class Main {
                 System.out.println("Invalid input. Try again.");
             }
 
+            // delete this code later just to test pr
             if (login_sucessfull) {
                 // Display the menu
+            } // else {
+                // Display the menu
             }
+
 
             // Close the scanner
             scan.close(); // Temporary fix
