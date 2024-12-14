@@ -36,7 +36,7 @@ public class Main {
             // delete this code later just to test pr
             if (login_sucessfull) {
                 // Display the menu
-            } // else {
+            } else {
                 // Display the menu
             }
 
