@@ -1,4 +1,7 @@
 import java.util.Scanner;
+// TODO: integrate student details into main
+//TODO: ustaz menu after login
+//TODO: logout
 
 public class Main {
     public static void main(String[] args) {
