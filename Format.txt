@@ -1,0 +1,4 @@
+Format for student hafazan record:
+no.of surah-ayat
+
+example:1-2 = Al-Fatihah 2nd ayat

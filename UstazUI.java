@@ -22,6 +22,7 @@ public class UstazUI {
         loadUserData();
     }
 
+
     public boolean login() {
         // Validate credentials
         System.out.print("Please Enter Your Username: ");
@@ -40,6 +41,7 @@ public class UstazUI {
         System.out.println("Username or Password is incorrect");
         return false; // Return Login Failed
     }
+
 
     public void register() {
         // Register a new Ustaz
@@ -61,9 +63,11 @@ public class UstazUI {
         System.out.println("Registration Successful!");
     }
 
+
     public void logout() {
         System.out.println("Logout");
     }
+
 
     private void saveUserData() {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(userDataFile, true))) {
@@ -81,6 +85,7 @@ public class UstazUI {
         }
     }
     
+
     private boolean isDataAlreadySaved(String data) {
         try (BufferedReader reader = new BufferedReader(new FileReader(userDataFile))) {
             String line;
@@ -114,5 +119,4 @@ public class UstazUI {
             System.out.println("Error loading user data: " + e.getMessage());
         }
     }
-
 }

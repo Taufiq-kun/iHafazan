@@ -4,7 +4,7 @@ import java.io.*;
 
 public class StudentDetails {
     // Scanner object to get user input
-    static Scanner scanner = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
 
     // Create a database to store student details
     static ArrayList<String> studentNames = new ArrayList<>();
@@ -22,7 +22,7 @@ public class StudentDetails {
     }
 
 
-    public void InsertStudent (){
+    public void addStudent (){
         // Get the names of the students
         System.out.println("Enter the names of the student:");
         String name = scanner.nextLine();
@@ -44,9 +44,9 @@ public class StudentDetails {
     }
     
     
-    public void Edit() {
+    public void editStudent() {
         // List all the students
-        ListStudent();
+        listStudent();
     
         boolean validInput = false; // Flag to track valid input
     
@@ -75,9 +75,9 @@ public class StudentDetails {
     }
     
     
-    public void Delete() {
+    public void deleteStudent() {
         // List all the students
-        ListStudent();
+        listStudent();
     
         boolean validInput = false; // Flag to track valid input
     
@@ -104,8 +104,16 @@ public class StudentDetails {
             }
         }
     }
-    
 
+
+    public void listStudent(){
+        // List all the students
+        System.out.println("\nList of Students:");
+        for (int i = 0; i < studentNames.size(); i++) {
+            System.out.println((i + 1) + ". " + studentNames.get(i) + " - Hafazan: " + hafazanDetails.get(i));
+        }
+    }
+    
 
     private void saveUserData() {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(studentDataFile, true))) {
@@ -155,15 +163,6 @@ public class StudentDetails {
             }
         } catch (IOException e) {
             System.out.println("Error loading user data: " + e.getMessage());
-        }
-    }
-
-
-    private void ListStudent(){
-        // List all the students
-        System.out.println("\nList of Students:");
-        for (int i = 0; i < studentNames.size(); i++) {
-            System.out.println((i + 1) + ". " + studentNames.get(i) + " - Hafazan: " + hafazanDetails.get(i));
         }
     }
 }
