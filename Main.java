@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         UstazUI ustaz = new UstazUI();
         StudentDetails student = new StudentDetails();
+        progressTracking progress = new progressTracking();
         Scanner scan = new Scanner(System.in);
         boolean login_sucessfull = false;
     
